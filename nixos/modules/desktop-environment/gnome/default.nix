@@ -9,7 +9,7 @@
     gnome-tweaks
 
     # disabled for now because I can't figure out how to get it to work
-    # (callPackage ./gnome-ext/hanabi.nix {}).hanabi
+    (callPackage ./gnome-ext/hanabi.nix {}).hanabi
     # meson
     # ninja
     # glib # For post installation of Hanabi

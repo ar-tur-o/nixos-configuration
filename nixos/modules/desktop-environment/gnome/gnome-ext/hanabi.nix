@@ -66,8 +66,8 @@
     src = fetchFromGitHub {
       owner = "jeffshee";
       repo = "gnome-ext-hanabi";
-      rev = "f7f2231188d67bed828d0fdf978ace872da2d216";
-      sha256 = "sha256-IkQtg0fddCnEy2yGKtH5ZOdbuclJLkCqBjO2pSeUk9I=";
+      rev = "39c23784c5211aaa0d7917072433496b259445b0";
+      sha256 = "sha256-NX9BflcBdgZKTS9azfuyttnU7PPvolGvUMDFK5XXgKo=";
     };
   };
 }
