@@ -8,9 +8,7 @@ pushd "$scriptDir/.."
 
 sudo --user="$me" git add .
 nix fmt
-echo "Enter the hostname:"
-read -p "sudo nixos-rebuild switch --flake ./#" host
-sudo --user="$me" nixos-rebuild switch --flake ./#$host 
+sudo --user="$me" nixos-rebuild switch --flake ./#$(hostname) 
 echo "The following files were changed:"
 git status --short
 
