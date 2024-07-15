@@ -10,7 +10,6 @@
     userName = "artisal@${host.hostName}";
     # Git extenstions and such :)
     diff-so-fancy.enable = true;
-    lfs.enable = true;
   };
 
   # To me, it makes sense to bundle github aswell
