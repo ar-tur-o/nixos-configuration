@@ -61,6 +61,10 @@ in {
         "editor.defaultFormatter" = "svelte.svelte-vscode";
       };
       "svelte.enable-ts-plugin" = true;
+      "[javascript]" = {
+        "editor.tabsize" = 2;
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
     };
   };
 }
