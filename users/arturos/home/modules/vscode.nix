@@ -45,6 +45,7 @@ in {
 
     userSettings = {
       "explorer.compactFolders" = false;
+      "editor.tabsize" = 2;
       "[nix]" = {
         "editor.tabsize" = 2;
         "editor.defaultFormatter" = "kamadorueda.alejandra";

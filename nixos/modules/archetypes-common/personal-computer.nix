@@ -14,8 +14,8 @@
     ../system/locale-and-time/default.nix
     ../system/network/default.nix
     ../system/sound/default.nix
+
     # programs
-    ../programs/thunrar/default.nix
     ../programs/kitty/default.nix
     # stylix
     ../desktop-environment/stylix/default.nix

@@ -25,11 +25,12 @@
       EDITOR = "code --wait";
       BROWSER = "firefox";
       TERMINAL = "kitty";
-      GDK_BACKEND = "wayland,x11";
-      QT_QPA_PLATFORM = "wayland;xcb";
     };
 
     packages = with pkgs; [
+      # Nemo file browser
+      cinnamon.nemo-with-extensions
+
       # spell check
       hunspell
       hunspellDicts.en_US
