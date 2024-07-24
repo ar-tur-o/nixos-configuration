@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   imports = [
@@ -12,17 +13,15 @@
     ../../modules/archetypes-common/personal-computer.nix
     ../../modules/desktop-environment/gnome/default.nix
 
-    # only import moonlight for gamestreaming and steam for small games
+    # only import moonlight for gamestreaming
     ../../modules/programs/games/moonlight.nix
-    ../../modules/programs/games/steam.nix
 
     # Add users
     ../../../users/arturos/user.nix
   ];
 
-  # enable steam and moonlight
-  moonlight.enable = true;
-  steam.enable = true;
+  # enable moonlight
+  moonlight.enable = lib.mkForce true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
