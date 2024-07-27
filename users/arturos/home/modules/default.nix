@@ -5,6 +5,7 @@
     ./vscode.nix
     ./bash.nix
     ./kitty.nix
+    ./neovim.nix
     ./btop.nix
     ./mpv.nix
   ];

@@ -20,5 +20,6 @@
     environment.systemPackages = lib.optionals (config.home-manager.enable) [
       pkgs.home-manager
     ];
+    home-manager.backupFileExtension = "backup";
   };
 }
