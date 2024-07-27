@@ -2,7 +2,6 @@
   description = "My nixos flake.";
 
   inputs = {
-    
     # official nix source
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
