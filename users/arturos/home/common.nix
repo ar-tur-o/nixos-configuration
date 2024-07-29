@@ -2,12 +2,14 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }: {
   imports = [
     # import programs here
     ./modules/default.nix
     ./default-apps.nix
+    inputs.nixvim.homeManagerModules.nixvim
   ];
 
   xdg.enable = true;
