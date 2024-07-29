@@ -10,9 +10,13 @@
 
   stylix = {
     enable = true;
+
     # This is the full list of themes
     # https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/decaf.yaml";
+    base16Scheme = let
+      fileName = "catppuccin-frappe.yaml";
+    in "${pkgs.base16-schemes}/share/themes/${fileName}";
+
     polarity = "dark";
 
     opacity = {
