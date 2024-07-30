@@ -1,33 +1,13 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
+{lib, ...}: {
   imports = [
-    ../../modules/default.nix
-    inputs.nixvim.homeManagerModules.nixvim
+    # import programs here
+    ../../modules/core
+    ../../modules/optional/dev/btop.nix
   ];
 
   home = {
-    username = "media";
-    homeDirectory = lib.mkDefault "/home/media";
-
-    sessionVariables = {
-      EDITOR = "nvim";
-      BROWSER = "firefox";
-      TERMINAL = "kitty";
-    };
-
-    packages = with pkgs; [
-      # Nemo file browser
-      cinnamon.nemo-with-extensions
-
-      # spell check
-      hunspell
-      hunspellDicts.en_US
-    ];
+    username = "sunshine-host";
+    homeDirectory = lib.mkDefault "/home/sunshine-host";
   };
 
   # This value determines the Home Manager release that your
