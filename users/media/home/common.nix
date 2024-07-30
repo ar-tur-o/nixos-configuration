@@ -6,21 +6,13 @@
   ...
 }: {
   imports = [
-    ./modules/default.nix
-    ./default-apps.nix
+    ../../modules/default.nix
     inputs.nixvim.homeManagerModules.nixvim
   ];
 
-  xdg.enable = true;
-  xdg.mimeApps.defaultApplications = {
-    "application/pdf" = ["firefox.desktop"];
-    "text/html" = ["firefox.desktop"];
-    "image" = ["qimgv.desktop"];
-  };
-
   home = {
-    username = "arturos";
-    homeDirectory = lib.mkDefault "/home/arturos";
+    username = "media";
+    homeDirectory = lib.mkDefault "/home/media";
 
     sessionVariables = {
       EDITOR = "nvim";
@@ -35,27 +27,6 @@
       # spell check
       hunspell
       hunspellDicts.en_US
-
-      # social
-      spotify
-      discord
-
-      # creative suite
-      # blender # blender was causing problems with python version mismatches
-      krita
-      inkscape
-      ardour
-
-      # qimgv for viewing images
-      qimgv
-
-      # office
-      libreoffice
-
-      # misc
-      qbittorrent-qt5
-      insync
-      google-chrome
     ];
   };
 

@@ -7,32 +7,14 @@
 }: {
   imports = [
     # import programs here
-    ./modules/default.nix
-    ./default-apps.nix
-    inputs.nixvim.homeManagerModules.nixvim
+    ../../modules/default.nix
   ];
-
-  xdg.enable = true;
-  xdg.mimeApps.defaultApplications = {
-    "application/pdf" = ["firefox.desktop"];
-    "text/html" = ["firefox.desktop"];
-    "image" = ["qimgv.desktop"];
-  };
 
   home = {
     username = "arturos";
     homeDirectory = lib.mkDefault "/home/arturos";
 
-    sessionVariables = {
-      EDITOR = "code --wait";
-      BROWSER = "firefox";
-      TERMINAL = "kitty";
-    };
-
     packages = with pkgs; [
-      # Nemo file browser
-      cinnamon.nemo-with-extensions
-
       # spell check
       hunspell
       hunspellDicts.en_US
