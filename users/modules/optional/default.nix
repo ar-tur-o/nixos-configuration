@@ -6,5 +6,6 @@
     ./dev/default.nix
     ./social/default.nix
     ./creative/default.nix
+    ./games/default.nix
   ];
 }
