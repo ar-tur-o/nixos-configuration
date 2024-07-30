@@ -1,45 +1,13 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
+{lib, ...}: {
   imports = [
     # import programs here
-    ../../modules/default.nix
+    ../../modules/core
+    ../../modules/optional
   ];
 
   home = {
     username = "arturos";
     homeDirectory = lib.mkDefault "/home/arturos";
-
-    packages = with pkgs; [
-      # spell check
-      hunspell
-      hunspellDicts.en_US
-
-      # social
-      spotify
-      discord
-
-      # creative suite
-      # blender # blender was causing problems with python version mismatches
-      krita
-      inkscape
-      ardour
-
-      # qimgv for viewing images
-      qimgv
-
-      # office
-      libreoffice
-
-      # misc
-      qbittorrent-qt5
-      insync
-      google-chrome
-    ];
   };
 
   # This value determines the Home Manager release that your
