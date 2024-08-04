@@ -2,12 +2,12 @@
   imports = [
     # import programs here
     ../../modules/core
-    ../../modules/optional
+    ../../modules/optional/dev/btop.nix
   ];
 
   home = {
-    username = "arturos";
-    homeDirectory = lib.mkDefault "/home/arturos";
+    username = "sunshine-host";
+    homeDirectory = lib.mkDefault "/home/sunshine-host";
   };
 
   # This value determines the Home Manager release that your

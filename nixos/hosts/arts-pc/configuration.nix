@@ -15,6 +15,7 @@
 
     # Add users
     ../../../users/arturos/user.nix
+    ../../../users/sunshine-host/user.nix
 
     # Raid config
     # ./raid-1.nix

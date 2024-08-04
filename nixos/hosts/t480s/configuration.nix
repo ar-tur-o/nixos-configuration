@@ -13,15 +13,9 @@
     ../../modules/archetypes-common/personal-computer.nix
     ../../modules/desktop-environment/gnome/default.nix
 
-    # only import moonlight for gamestreaming
-    ../../modules/programs/games/moonlight.nix
-
     # Add users
     ../../../users/arturos/user.nix
   ];
-
-  # enable moonlight
-  moonlight.enable = lib.mkForce true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

@@ -1,4 +1,5 @@
-{
+{inputs, ...}: {
+  imports = [inputs.nixvim.homeManagerModules.nixvim];
   programs.nixvim = {
     enable = true;
     opts = {
@@ -67,4 +68,5 @@
       };
     };
   };
+  home.sessionVariables.EDITOR = "nvim";
 }

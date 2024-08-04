@@ -15,8 +15,6 @@
     ../system/network/default.nix
     ../system/sound/default.nix
 
-    # programs
-    ../programs/kitty/default.nix
     # stylix
     ../desktop-environment/stylix/default.nix
     # DE is not included cause' not all DEs work well on low power machines
