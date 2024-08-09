@@ -2,6 +2,17 @@
   # enables opengl
   hardware.graphics.enable = true;
 
+  services.blueman.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    input = {
+      General = {
+        ClassicBondedOnly = false;
+      };
+    };
+  };
+
   services = {
     xserver = {
       xkb = {

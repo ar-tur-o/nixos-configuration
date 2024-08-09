@@ -48,6 +48,7 @@
 
       telescope.enable = true;
       nvim-autopairs.enable = true;
+      nvim-tree.enable = true;
 
       # autocomplete
       cmp = {
