@@ -1,5 +1,6 @@
 {
   imports = [
+    ./calculator.nix
     ./insync.nix
     ./hunspell.nix
     ./qbittorrent.nix
