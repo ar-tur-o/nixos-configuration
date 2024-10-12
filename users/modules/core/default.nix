@@ -7,5 +7,6 @@
     ./nemo.nix
     ./neovim.nix
     ./qimgv.nix
+    ./git.nix
   ];
 }

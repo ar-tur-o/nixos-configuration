@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.qbittorrent-qt5];
+  home.packages = [pkgs.qbittorrent];
 }

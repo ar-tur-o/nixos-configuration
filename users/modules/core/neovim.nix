@@ -15,7 +15,7 @@
       lsp = {
         enable = true;
         servers = {
-          nil-ls.enable = true; # Nix
+          nil_ls.enable = true; # Nix
 
           # more performant langs
           bashls.enable = true; # Bash
@@ -23,7 +23,7 @@
           cmake.enable = true;
 
           # web dev langs
-          tsserver.enable = true; # typescipt
+          ts_ls.enable = true; # typescipt
           tailwindcss.enable = true;
           svelte.enable = true;
           html.enable = true;
@@ -36,9 +36,11 @@
           jsonls.enable = true; # Json
           yamlls.enable = true; # Yaml
           pylsp.enable = true; # python
-          typos-lsp.enable = true; # Typo autocorrect :)
+          typos_lsp.enable = true; # Typo autocorrect :)
         };
       };
+
+      web-devicons.enable = true;
 
       treesitter.enable = true;
       treesitter-context.enable = true; # shows the line where the function is declared at the top of the screen
