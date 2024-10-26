@@ -1,6 +1,6 @@
 {
   imports = [
-    ./btop.nix
+    ./firefox.nix
     ./chrome.nix
   ];
 }

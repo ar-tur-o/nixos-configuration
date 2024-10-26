@@ -4,10 +4,11 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   programs.firefox = {
-    enable = true;
+    enable = lib.mkDefault true;
 
     profiles = {
       "Arturo Salgado" = {

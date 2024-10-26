@@ -16,9 +16,9 @@
         enable = true;
         servers = {
           nil_ls.enable = true; # Nix
+          bashls.enable = true; # Bash
 
           # more performant langs
-          bashls.enable = true; # Bash
           ccls.enable = true; # C / C++
           cmake.enable = true;
 

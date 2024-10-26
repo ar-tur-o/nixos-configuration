@@ -1,7 +1,6 @@
 {
   imports = [
     ./bash.nix
-    ./firefox.nix
     ./kitty.nix
     ./mpv.nix
     ./nemo.nix

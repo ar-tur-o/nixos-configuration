@@ -92,7 +92,7 @@
                         value = import (
                           if builtins.pathExists ./users/${user}/home/${host.hostName}.nix
                           then ./users/${user}/home/${host.hostName}.nix
-                          else ./users/${user}/home/common.nix
+                          else ./users/${user}/home/default.nix
                         );
                       })
                       host.users);

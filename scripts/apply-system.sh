@@ -7,7 +7,7 @@ pushd "$scriptDir/.."
 
 sudo git add .
 nix fmt
-sudo nixos-rebuild switch --flake ./#$(hostname) 
+sudo nixos-rebuild switch --show-trace --flake ./#$(hostname) 
 echo "The following files were changed:"
 git status --short
 
