@@ -1,3 +1,6 @@
 {
-  imports = [./moonlight.nix];
+  imports = [
+    ./moonlight.nix
+    ./minecraft.nix
+  ];
 }
