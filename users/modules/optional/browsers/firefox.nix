@@ -1,24 +1,13 @@
 # Documentation at:
 # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.firefox.enable
-{
-  config,
-  pkgs,
-  inputs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   programs.firefox = {
     enable = lib.mkDefault true;
 
     profiles = {
       "Arturo Salgado" = {
-        # firefox addons are stored on the Nix user repo
-        extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-          bitwarden
-          ublock-origin
-          clearurls
-          return-youtube-dislikes
-        ];
+        # no more extensions because they were buggy and inconvenient.
+
         settings = {
           "extensions.autoDisableScopes" = 0; # this allows for extensions to be auto-enabled
         };
