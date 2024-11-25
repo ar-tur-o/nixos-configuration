@@ -64,7 +64,7 @@
         }
         {
           hostName = "portable-64";
-          system = "x84_64-linux";
+          system = "x86_64-linux";
           users = ["arturos"];
         }
       ];
@@ -76,38 +76,39 @@
               inherit inputs;
               inherit host;
             };
-            modules = [
-              # import the host
-              ./nixos/hosts/${host.hostName}/configuration.nix
+            modules =
+              [
+                # import the host
+                ./nixos/hosts/${host.hostName}/configuration.nix
 
-              # import each user home module
-              inputs.home-manager.nixosModules.home-manager
-              {
-                home-manager = {
-                  extraSpecialArgs = {
-                    inherit inputs;
-                    inherit host;
+                # import each user home module
+                inputs.home-manager.nixosModules.home-manager
+                {
+                  home-manager = {
+                    extraSpecialArgs = {
+                      inherit inputs;
+                      inherit host;
+                    };
+
+                    useGlobalPkgs = true;
+                    useUserPackages = true;
+                    users =
+                      builtins.listToAttrs
+                      (builtins.map
+                        (user: {
+                          name = user;
+                          value = import (
+                            if builtins.pathExists ./users/${user}/home/${host.hostName}.nix
+                            then ./users/${user}/home/${host.hostName}.nix
+                            else ./users/${user}/home/default.nix
+                          );
+                        })
+                        host.users);
                   };
-
-                  useGlobalPkgs = true;
-                  useUserPackages = true;
-                  users =
-                    builtins.listToAttrs
-                    (builtins.map
-                      (user: {
-                        name = user;
-                        value = import (
-                          if builtins.pathExists ./users/${user}/home/${host.hostName}.nix
-                          then ./users/${user}/home/${host.hostName}.nix
-                          else ./users/${user}/home/default.nix
-                        );
-                      })
-                      host.users);
-                };
-              }
-            ] 
-            # import all user definitions
-            ++ map (user: ./users/${user}/user.nix) host.users;
+                }
+              ]
+              # import all user definitions
+              ++ map (user: ./users/${user}/user.nix) host.users;
           };
         })
         hosts);
