@@ -17,6 +17,9 @@
 
     # stylix
     ../desktop-environment/stylix/default.nix
+
+    # Enable generic support for gnome apps
+    ../desktop-environment/gnome-apps/default.nix
     # DE is not included cause' not all DEs work well on low power machines
   ];
 }
