@@ -1,9 +1,11 @@
 {lib, ...}: {
-  imports = [
-    # import programs here
+  imports = let
+    path = ../../modules/optional;
+  in [
     ../../modules/core
+    "${path}/browsers/firefox.nix"
+    "${path}/util"
   ];
-
   home = {
     username = "arturos";
     homeDirectory = lib.mkDefault "/home/arturos";

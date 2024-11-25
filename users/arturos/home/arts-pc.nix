@@ -2,6 +2,7 @@
   imports = [
     # import programs here
     ../../modules/core
+    ../../modules/optional
   ];
 
   home = {

@@ -5,7 +5,7 @@ in {
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.sddm.theme = "${theme.package {
     inherit pkgs;
-    image = ../../../../../wallpaper.png;
+    image = ../../stylix/wallpaper.png; # just yoink the wallpaper from stylix
   }}";
   environment.systemPackages = theme.dependencies {inherit pkgs;};
 }
