@@ -26,9 +26,6 @@
     # Hyprland
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
-    # VSCode extensions
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
     nixvim = {
       url = "github:nix-community/nixvim";
       # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
