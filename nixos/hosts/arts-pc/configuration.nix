@@ -12,13 +12,6 @@
     ../../modules/desktop-environment/gnome/default.nix
     # Also games :)
     ../../modules/programs/games/default.nix
-
-    # Add users
-    ../../../users/arturos/user.nix
-    ../../../users/sunshine-host/user.nix
-
-    # Raid config
-    # ./raid-1.nix
   ];
 
   services.flatpak.enable = true;

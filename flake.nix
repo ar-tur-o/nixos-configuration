@@ -62,6 +62,11 @@
           system = "x86_64-linux";
           users = ["arturos"];
         }
+        {
+          hostName = "portable-64";
+          system = "x84_64-linux";
+          users = ["arturos"];
+        }
       ];
     in
       builtins.listToAttrs (builtins.map (host: {
@@ -72,8 +77,10 @@
               inherit host;
             };
             modules = [
+              # import the host
               ./nixos/hosts/${host.hostName}/configuration.nix
 
+              # import each user home module
               inputs.home-manager.nixosModules.home-manager
               {
                 home-manager = {
@@ -98,7 +105,9 @@
                       host.users);
                 };
               }
-            ];
+            ] 
+            # import all user definitions
+            ++ map (user: ./users/${user}/user.nix) host.users;
           };
         })
         hosts);
