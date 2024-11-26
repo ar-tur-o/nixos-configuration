@@ -4,7 +4,7 @@
   in [
     ../../modules/core
     "${path}/browsers/firefox.nix"
-    "${path}/util"
+    "${path}/files"
   ];
   home = {
     username = "arturos";

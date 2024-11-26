@@ -5,8 +5,9 @@
     ../../modules/core
     "${path}/browsers"
     "${path}/social"
-    "${path}/util"
+    "${path}/files"
     "${path}/writing"
+    "${path}/creative/blender.nix"
   ];
   home = {
     username = "arturos";
