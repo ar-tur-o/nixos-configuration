@@ -24,6 +24,13 @@
     # Enable CUPS to print documents.
     printing.enable = true;
 
+    # this enables printer autodiscovery
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+
     # Adds support for yubikey
     udev.packages = [
       pkgs.libfido2
