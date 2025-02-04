@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  # I might split these into separate files, but because they are core apps I
+  # I might split these into separate files, but because they are core apps
   # always want these apps with me on all gui systems, so it makes no difference
   home.packages = with pkgs; [
     nemo-with-extensions # file explorer
@@ -13,5 +13,4 @@
     gnome-disk-utility # manage disks and partitions
     eyedropper # eyedropper app
   ];
-  xdg.mimeApps.defaultApplications."inode/directory" = "nemo.desktop";
 }
