@@ -62,8 +62,4 @@
   home.sessionVariables = {
     BROWSER = "firefox";
   };
-  xdg.mimeApps.defaultApplications = {
-    "text/html" = "firefox.desktop";
-    "text/pdf" = "firefox.desktop";
-  };
 }
